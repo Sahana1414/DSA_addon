@@ -1,0 +1,13 @@
+use addon;
+create table studentdetails(name varchar(30),marks int,department varchar(20),section varchar(10));
+insert into studentdetails values("Roshna",90,BCA,B),("Sahana", 80,BCA,B),("Bavyaa", 55,BCA,B),("Kayal", 75,BCA,B),("Yashika", 70,BCA,B);
+select * from studentdetails;
+
+update studentdetails set name="aruna" where name="Kayal";
+select name,department,section from studentdetails where (marks<60);
+alter table studentdetails add gender varchar(40);
+select * from studentdetails;
+
+alter table studentdetails drop column section;
+truncate table studentdetails;
+drop database addon;
